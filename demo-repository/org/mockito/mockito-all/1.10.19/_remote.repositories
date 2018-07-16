@@ -1,0 +1,8 @@
+#NOTE: This is an Aether internal implementation file, its format can be changed without prior notice.
+#Tue May 17 10:25:05 CEST 2016
+mockito-all-1.10.19.jar>builder-nexus=
+mockito-all-1.10.19.jar>central=
+mockito-all-1.10.19.jar>ParasoftNexusRepoPL=
+mockito-all-1.10.19.pom>central=
+mockito-all-1.10.19.pom>ParasoftNexusRepoPL=
+mockito-all-1.10.19.pom>builder-nexus=
