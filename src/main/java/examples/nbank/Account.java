@@ -66,7 +66,7 @@ public class Account {
         }
     }
     
-    public boolean isOverdrawn(int balance) {         
+/*    public boolean isOverdrawn(int balance) {         
         if (balance >= 0) {
             _accountsLog.add("Customer is in good standing!");
             return false;
@@ -85,7 +85,7 @@ public class Account {
                 return true;
              }
         }
-    }
+    }*/
     
     /**
      * @pre transaction != null
