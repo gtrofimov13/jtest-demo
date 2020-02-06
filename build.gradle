@@ -7,7 +7,7 @@ apply plugin: 'maven'
 group = theGroup
 version = theVersion
 
-def jtestPluginPath = projectDir.absolutePath + '/../../integration/gradle/jtest.gradle'
+def jtestPluginPath = System.properties['jtest.home'] + '/integration/gradle/jtest.gradle'
 if(file(jtestPluginPath).exists()) {
     apply from: jtestPluginPath
 
