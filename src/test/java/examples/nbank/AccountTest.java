@@ -36,6 +36,13 @@ public class AccountTest {
 		ITransaction transaction = mockITransaction();
 		underTest.apply(transaction);
 
+		// Then - assertions for this instance of Account
+		assertNotNull(underTest.getCustomer());
+		assertEquals("john", underTest.getCustomer().toStrng());
+		assertEquals("123-45-6789", underTest.getCustomer().getSSN());
+		assertEquals(1000, underTest.getBalance());
+		assertEquals("silver", underTest.getStatus());
+
 	}
 
 	/**
@@ -66,6 +73,16 @@ public class AccountTest {
 		// When
 		int result = underTest.getBalance();
 
+		// Then - assertions for result of method getBalance()
+		assertEquals(1000, result);
+
+		// Then - assertions for this instance of Account
+		assertNotNull(underTest.getCustomer());
+		assertEquals("john", underTest.getCustomer().toStrng());
+		assertEquals("123-45-6789", underTest.getCustomer().getSSN());
+		assertEquals(1000, underTest.getBalance());
+		assertEquals("silver", underTest.getStatus());
+
 		// Then
 		// assertEquals(0, result);
 	}
@@ -84,6 +101,18 @@ public class AccountTest {
 
 		// When
 		Customer result = underTest.getCustomer();
+
+		// Then - assertions for result of method getCustomer()
+		assertNotNull(result);
+		assertEquals("john", result.toStrng());
+		assertEquals("123-45-6789", result.getSSN());
+
+		// Then - assertions for this instance of Account
+		assertNotNull(underTest.getCustomer());
+		assertEquals("john", underTest.getCustomer().toStrng());
+		assertEquals("123-45-6789", underTest.getCustomer().getSSN());
+		assertEquals(1000, underTest.getBalance());
+		assertEquals("silver", underTest.getStatus());
 
 		// Then
 		// assertNotNull(result);
@@ -104,6 +133,16 @@ public class AccountTest {
 		// When
 		String result = underTest.getID();
 
+		// Then - assertions for result of method getID()
+		assertEquals("123-45-6789", result);
+
+		// Then - assertions for this instance of Account
+		assertNotNull(underTest.getCustomer());
+		assertEquals("john", underTest.getCustomer().toStrng());
+		assertEquals("123-45-6789", underTest.getCustomer().getSSN());
+		assertEquals(1000, underTest.getBalance());
+		assertEquals("silver", underTest.getStatus());
+
 		// Then
 		// assertEquals("", result);
 	}
@@ -122,6 +161,16 @@ public class AccountTest {
 
 		// When
 		String result = underTest.getStatus();
+
+		// Then - assertions for result of method getStatus()
+		assertEquals("silver", result);
+
+		// Then - assertions for this instance of Account
+		assertNotNull(underTest.getCustomer());
+		assertEquals("john", underTest.getCustomer().toStrng());
+		assertEquals("123-45-6789", underTest.getCustomer().getSSN());
+		assertEquals(1000, underTest.getBalance());
+		assertEquals("silver", underTest.getStatus());
 
 		// Then
 		// assertEquals("", result);
@@ -142,6 +191,13 @@ public class AccountTest {
 		// When
 		int balance = 0; // UTA: default value
 		underTest.setBalance(balance);
+
+		// Then - assertions for this instance of Account
+		assertNotNull(underTest.getCustomer());
+		assertEquals("john", underTest.getCustomer().toStrng());
+		assertEquals("123-45-6789", underTest.getCustomer().getSSN());
+		assertEquals(0, underTest.getBalance());
+		assertEquals("silver", underTest.getStatus());
 
 	}
 }
