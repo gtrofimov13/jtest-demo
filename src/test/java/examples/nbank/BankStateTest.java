@@ -21,7 +21,7 @@ public class BankStateTest {
 	 * @see examples.nbank.BankState#endMaintenance()
 	 * @author gtrofimov
 	 */
-	@Test
+	@Test(timeout = 1000)
 	public void testEndMaintenance() throws Throwable {
 		// When
 		BankState.endMaintenance();
@@ -34,7 +34,7 @@ public class BankStateTest {
 	 * @see examples.nbank.BankState#isMaintenanceMode()
 	 * @author gtrofimov
 	 */
-	@Test
+	@Test(timeout = 1000)
 	public void testIsMaintenanceMode() throws Throwable {
 		// When
 		Boolean result = BankState.isMaintenanceMode();
@@ -49,7 +49,7 @@ public class BankStateTest {
 	 * @see examples.nbank.BankState#startMaintenance()
 	 * @author gtrofimov
 	 */
-	@Test
+	@Test(timeout = 1000)
 	public void testStartMaintenance() throws Throwable {
 		// When
 		BankState.startMaintenance();

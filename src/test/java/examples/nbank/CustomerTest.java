@@ -22,12 +22,10 @@ public class CustomerTest {
 	 * @see examples.nbank.Customer#equals(Object)
 	 * @author gtrofimov
 	 */
-	@Test
+	@Test(timeout = 1000)
 	public void testEquals() throws Throwable {
 		// Given
-		String name = ""; // UTA: default value
-		String ssn = ""; // UTA: default value
-		Customer underTest = new Customer(name, ssn);
+		Customer underTest = NbankFactory.createCustomer();
 
 		// When
 		Object o = new Object(); // UTA: default value
@@ -43,12 +41,10 @@ public class CustomerTest {
 	 * @see examples.nbank.Customer#getName()
 	 * @author gtrofimov
 	 */
-	@Test
+	@Test(timeout = 1000)
 	public void testGetName() throws Throwable {
 		// Given
-		String name = ""; // UTA: default value
-		String ssn = ""; // UTA: default value
-		Customer underTest = new Customer(name, ssn);
+		Customer underTest = NbankFactory.createCustomer();
 
 		// When
 		String result = underTest.getName();
@@ -63,12 +59,10 @@ public class CustomerTest {
 	 * @see examples.nbank.Customer#getSSN()
 	 * @author gtrofimov
 	 */
-	@Test
+	@Test(timeout = 1000)
 	public void testGetSSN() throws Throwable {
 		// Given
-		String name = ""; // UTA: default value
-		String ssn = ""; // UTA: default value
-		Customer underTest = new Customer(name, ssn);
+		Customer underTest = NbankFactory.createCustomer();
 
 		// When
 		String result = underTest.getSSN();
@@ -83,12 +77,10 @@ public class CustomerTest {
 	 * @see examples.nbank.Customer#hashCode()
 	 * @author gtrofimov
 	 */
-	@Test
+	@Test(timeout = 1000)
 	public void testHashCode() throws Throwable {
 		// Given
-		String name = ""; // UTA: default value
-		String ssn = ""; // UTA: default value
-		Customer underTest = new Customer(name, ssn);
+		Customer underTest = NbankFactory.createCustomer();
 
 		// When
 		int result = underTest.hashCode();
@@ -103,12 +95,10 @@ public class CustomerTest {
 	 * @see examples.nbank.Customer#loadCustomer()
 	 * @author gtrofimov
 	 */
-	@Test
+	@Test(timeout = 1000)
 	public void testLoadCustomer() throws Throwable {
 		// Given
-		String name = ""; // UTA: default value
-		String ssn = ""; // UTA: default value
-		Customer underTest = new Customer(name, ssn);
+		Customer underTest = NbankFactory.createCustomer();
 
 		// When
 		boolean result = underTest.loadCustomer();
@@ -123,7 +113,7 @@ public class CustomerTest {
 	 * @see examples.nbank.Customer#main(String[])
 	 * @author gtrofimov
 	 */
-	@Test
+	@Test(timeout = 1000)
 	public void testMain() throws Throwable {
 		// When
 		String[] args = new java.lang.String[0]; // UTA: default value
@@ -137,16 +127,14 @@ public class CustomerTest {
 	 * @see examples.nbank.Customer#setName(String)
 	 * @author gtrofimov
 	 */
-	@Test
+	@Test(timeout = 1000)
 	public void testSetName() throws Throwable {
 		// Given
-		String name = ""; // UTA: default value
-		String ssn = ""; // UTA: default value
-		Customer underTest = new Customer(name, ssn);
+		Customer underTest = NbankFactory.createCustomer();
 
 		// When
-		String name2 = ""; // UTA: default value
-		underTest.setName(name2);
+		String name = ""; // UTA: default value
+		underTest.setName(name);
 
 	}
 
@@ -156,16 +144,14 @@ public class CustomerTest {
 	 * @see examples.nbank.Customer#setSSN(String)
 	 * @author gtrofimov
 	 */
-	@Test
+	@Test(timeout = 1000)
 	public void testSetSSN() throws Throwable {
 		// Given
-		String name = ""; // UTA: default value
-		String ssn = ""; // UTA: default value
-		Customer underTest = new Customer(name, ssn);
+		Customer underTest = NbankFactory.createCustomer();
 
 		// When
-		String ssn2 = ""; // UTA: default value
-		underTest.setSSN(ssn2);
+		String ssn = ""; // UTA: default value
+		underTest.setSSN(ssn);
 
 	}
 
@@ -175,12 +161,10 @@ public class CustomerTest {
 	 * @see examples.nbank.Customer#toStrng()
 	 * @author gtrofimov
 	 */
-	@Test
+	@Test(timeout = 1000)
 	public void testToStrng() throws Throwable {
 		// Given
-		String name = ""; // UTA: default value
-		String ssn = ""; // UTA: default value
-		Customer underTest = new Customer(name, ssn);
+		Customer underTest = NbankFactory.createCustomer();
 
 		// When
 		String result = underTest.toStrng();

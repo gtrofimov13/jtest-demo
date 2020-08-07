@@ -5,8 +5,6 @@ package examples.nbank;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
-import static org.powermock.api.mockito.PowerMockito.mock;
-import static org.powermock.api.mockito.PowerMockito.when;
 
 import org.junit.Test;
 
@@ -24,16 +22,10 @@ public class CreditCardTest {
 	 * @see examples.nbank.CreditCard#displayStatement()
 	 * @author gtrofimov
 	 */
-	@Test
+	@Test(timeout = 1000)
 	public void testDisplayStatement() throws Throwable {
 		// Given
-		int balance = 0; // UTA: default value
-		String id = ""; // UTA: default value
-		String securityNumber = ""; // UTA: default value
-		String name = ""; // UTA: default value
-		String zipcode = ""; // UTA: default value
-		String creditCardNumber = ""; // UTA: default value
-		CreditCard underTest = new CreditCard(balance, id, securityNumber, name, zipcode, creditCardNumber);
+		CreditCard underTest = NbankFactory.createCreditCard();
 
 		// When
 		underTest.displayStatement();
@@ -46,16 +38,10 @@ public class CreditCardTest {
 	 * @see examples.nbank.CreditCard#get_creditCardNumber()
 	 * @author gtrofimov
 	 */
-	@Test
+	@Test(timeout = 1000)
 	public void testGet_creditCardNumber() throws Throwable {
 		// Given
-		int balance = 0; // UTA: default value
-		String id = ""; // UTA: default value
-		String securityNumber = ""; // UTA: default value
-		String name = ""; // UTA: default value
-		String zipcode = ""; // UTA: default value
-		String creditCardNumber = ""; // UTA: default value
-		CreditCard underTest = new CreditCard(balance, id, securityNumber, name, zipcode, creditCardNumber);
+		CreditCard underTest = NbankFactory.createCreditCard();
 
 		// When
 		String result = underTest.get_creditCardNumber();
@@ -70,16 +56,10 @@ public class CreditCardTest {
 	 * @see examples.nbank.CreditCard#get_currentBalance()
 	 * @author gtrofimov
 	 */
-	@Test
+	@Test(timeout = 1000)
 	public void testGet_currentBalance() throws Throwable {
 		// Given
-		int balance = 0; // UTA: default value
-		String id = ""; // UTA: default value
-		String securityNumber = ""; // UTA: default value
-		String name = ""; // UTA: default value
-		String zipcode = ""; // UTA: default value
-		String creditCardNumber = ""; // UTA: default value
-		CreditCard underTest = new CreditCard(balance, id, securityNumber, name, zipcode, creditCardNumber);
+		CreditCard underTest = NbankFactory.createCreditCard();
 
 		// When
 		int result = underTest.get_currentBalance();
@@ -94,16 +74,10 @@ public class CreditCardTest {
 	 * @see examples.nbank.CreditCard#get_customerId()
 	 * @author gtrofimov
 	 */
-	@Test
+	@Test(timeout = 1000)
 	public void testGet_customerId() throws Throwable {
 		// Given
-		int balance = 0; // UTA: default value
-		String id = ""; // UTA: default value
-		String securityNumber = ""; // UTA: default value
-		String name = ""; // UTA: default value
-		String zipcode = ""; // UTA: default value
-		String creditCardNumber = ""; // UTA: default value
-		CreditCard underTest = new CreditCard(balance, id, securityNumber, name, zipcode, creditCardNumber);
+		CreditCard underTest = NbankFactory.createCreditCard();
 
 		// When
 		String result = underTest.get_customerId();
@@ -118,16 +92,10 @@ public class CreditCardTest {
 	 * @see examples.nbank.CreditCard#get_customerName()
 	 * @author gtrofimov
 	 */
-	@Test
+	@Test(timeout = 1000)
 	public void testGet_customerName() throws Throwable {
 		// Given
-		int balance = 0; // UTA: default value
-		String id = ""; // UTA: default value
-		String securityNumber = ""; // UTA: default value
-		String name = ""; // UTA: default value
-		String zipcode = ""; // UTA: default value
-		String creditCardNumber = ""; // UTA: default value
-		CreditCard underTest = new CreditCard(balance, id, securityNumber, name, zipcode, creditCardNumber);
+		CreditCard underTest = NbankFactory.createCreditCard();
 
 		// When
 		String result = underTest.get_customerName();
@@ -142,16 +110,10 @@ public class CreditCardTest {
 	 * @see examples.nbank.CreditCard#get_socialSecurityNumber()
 	 * @author gtrofimov
 	 */
-	@Test
+	@Test(timeout = 1000)
 	public void testGet_socialSecurityNumber() throws Throwable {
 		// Given
-		int balance = 0; // UTA: default value
-		String id = ""; // UTA: default value
-		String securityNumber = ""; // UTA: default value
-		String name = ""; // UTA: default value
-		String zipcode = ""; // UTA: default value
-		String creditCardNumber = ""; // UTA: default value
-		CreditCard underTest = new CreditCard(balance, id, securityNumber, name, zipcode, creditCardNumber);
+		CreditCard underTest = NbankFactory.createCreditCard();
 
 		// When
 		String result = underTest.get_socialSecurityNumber();
@@ -166,16 +128,10 @@ public class CreditCardTest {
 	 * @see examples.nbank.CreditCard#get_zipcode()
 	 * @author gtrofimov
 	 */
-	@Test
+	@Test(timeout = 1000)
 	public void testGet_zipcode() throws Throwable {
 		// Given
-		int balance = 0; // UTA: default value
-		String id = ""; // UTA: default value
-		String securityNumber = ""; // UTA: default value
-		String name = ""; // UTA: default value
-		String zipcode = ""; // UTA: default value
-		String creditCardNumber = ""; // UTA: default value
-		CreditCard underTest = new CreditCard(balance, id, securityNumber, name, zipcode, creditCardNumber);
+		CreditCard underTest = NbankFactory.createCreditCard();
 
 		// When
 		String result = underTest.get_zipcode();
@@ -190,31 +146,16 @@ public class CreditCardTest {
 	 * @see examples.nbank.CreditCard#makePayment(Account)
 	 * @author gtrofimov
 	 */
-	@Test
+	@Test(timeout = 1000)
 	public void testMakePayment() throws Throwable {
 		// Given
-		int balance = 0; // UTA: default value
-		String id = ""; // UTA: default value
-		String securityNumber = ""; // UTA: default value
-		String name = ""; // UTA: default value
-		String zipcode = ""; // UTA: default value
-		String creditCardNumber = ""; // UTA: default value
-		CreditCard underTest = new CreditCard(balance, id, securityNumber, name, zipcode, creditCardNumber);
+		CreditCard underTest = NbankFactory.createCreditCard();
 
 		// When
-		Account account = mockAccount();
+		Customer customer = NbankFactory.createCustomer();
+		Account account = NbankFactory.createAccount(customer);
 		underTest.makePayment(account);
 
-	}
-
-	/**
-	 * Parasoft Jtest UTA: Helper method to generate and configure mock of Account
-	 */
-	private static Account mockAccount() throws Throwable {
-		Account account = mock(Account.class);
-		String getIDResult = ""; // UTA: default value
-		when(account.getID()).thenReturn(getIDResult);
-		return account;
 	}
 
 	/**
@@ -223,16 +164,10 @@ public class CreditCardTest {
 	 * @see examples.nbank.CreditCard#set_creditCardNumber(String)
 	 * @author gtrofimov
 	 */
-	@Test
+	@Test(timeout = 1000)
 	public void testSet_creditCardNumber() throws Throwable {
 		// Given
-		int balance = 0; // UTA: default value
-		String id = ""; // UTA: default value
-		String securityNumber = ""; // UTA: default value
-		String name = ""; // UTA: default value
-		String zipcode = ""; // UTA: default value
-		String creditCardNumber = ""; // UTA: default value
-		CreditCard underTest = new CreditCard(balance, id, securityNumber, name, zipcode, creditCardNumber);
+		CreditCard underTest = NbankFactory.createCreditCard();
 
 		// When
 		String cardNumber = ""; // UTA: default value
@@ -246,20 +181,14 @@ public class CreditCardTest {
 	 * @see examples.nbank.CreditCard#set_currentBalance(int)
 	 * @author gtrofimov
 	 */
-	@Test
+	@Test(timeout = 1000)
 	public void testSet_currentBalance() throws Throwable {
 		// Given
-		int balance = 0; // UTA: default value
-		String id = ""; // UTA: default value
-		String securityNumber = ""; // UTA: default value
-		String name = ""; // UTA: default value
-		String zipcode = ""; // UTA: default value
-		String creditCardNumber = ""; // UTA: default value
-		CreditCard underTest = new CreditCard(balance, id, securityNumber, name, zipcode, creditCardNumber);
+		CreditCard underTest = NbankFactory.createCreditCard();
 
 		// When
-		int balance2 = 0; // UTA: default value
-		underTest.set_currentBalance(balance2);
+		int balance = 0; // UTA: default value
+		underTest.set_currentBalance(balance);
 
 	}
 
@@ -269,20 +198,14 @@ public class CreditCardTest {
 	 * @see examples.nbank.CreditCard#set_customerId(String)
 	 * @author gtrofimov
 	 */
-	@Test
+	@Test(timeout = 1000)
 	public void testSet_customerId() throws Throwable {
 		// Given
-		int balance = 0; // UTA: default value
-		String id = ""; // UTA: default value
-		String securityNumber = ""; // UTA: default value
-		String name = ""; // UTA: default value
-		String zipcode = ""; // UTA: default value
-		String creditCardNumber = ""; // UTA: default value
-		CreditCard underTest = new CreditCard(balance, id, securityNumber, name, zipcode, creditCardNumber);
+		CreditCard underTest = NbankFactory.createCreditCard();
 
 		// When
-		String id2 = ""; // UTA: default value
-		underTest.set_customerId(id2);
+		String id = ""; // UTA: default value
+		underTest.set_customerId(id);
 
 	}
 
@@ -292,20 +215,14 @@ public class CreditCardTest {
 	 * @see examples.nbank.CreditCard#set_customerName(String)
 	 * @author gtrofimov
 	 */
-	@Test
+	@Test(timeout = 1000)
 	public void testSet_customerName() throws Throwable {
 		// Given
-		int balance = 0; // UTA: default value
-		String id = ""; // UTA: default value
-		String securityNumber = ""; // UTA: default value
-		String name = ""; // UTA: default value
-		String zipcode = ""; // UTA: default value
-		String creditCardNumber = ""; // UTA: default value
-		CreditCard underTest = new CreditCard(balance, id, securityNumber, name, zipcode, creditCardNumber);
+		CreditCard underTest = NbankFactory.createCreditCard();
 
 		// When
-		String name2 = ""; // UTA: default value
-		underTest.set_customerName(name2);
+		String name = ""; // UTA: default value
+		underTest.set_customerName(name);
 
 	}
 
@@ -315,20 +232,14 @@ public class CreditCardTest {
 	 * @see examples.nbank.CreditCard#set_socialSecurityNumber(String)
 	 * @author gtrofimov
 	 */
-	@Test
+	@Test(timeout = 1000)
 	public void testSet_socialSecurityNumber() throws Throwable {
 		// Given
-		int balance = 0; // UTA: default value
-		String id = ""; // UTA: default value
-		String securityNumber = ""; // UTA: default value
-		String name = ""; // UTA: default value
-		String zipcode = ""; // UTA: default value
-		String creditCardNumber = ""; // UTA: default value
-		CreditCard underTest = new CreditCard(balance, id, securityNumber, name, zipcode, creditCardNumber);
+		CreditCard underTest = NbankFactory.createCreditCard();
 
 		// When
-		String securityNumber2 = ""; // UTA: default value
-		underTest.set_socialSecurityNumber(securityNumber2);
+		String securityNumber = ""; // UTA: default value
+		underTest.set_socialSecurityNumber(securityNumber);
 
 	}
 
@@ -338,16 +249,10 @@ public class CreditCardTest {
 	 * @see examples.nbank.CreditCard#set_zipcode(String)
 	 * @author gtrofimov
 	 */
-	@Test
+	@Test(timeout = 1000)
 	public void testSet_zipcode() throws Throwable {
 		// Given
-		int balance = 0; // UTA: default value
-		String id = ""; // UTA: default value
-		String securityNumber = ""; // UTA: default value
-		String name = ""; // UTA: default value
-		String zipcode = ""; // UTA: default value
-		String creditCardNumber = ""; // UTA: default value
-		CreditCard underTest = new CreditCard(balance, id, securityNumber, name, zipcode, creditCardNumber);
+		CreditCard underTest = NbankFactory.createCreditCard();
 
 		// When
 		String _zipcode = ""; // UTA: default value
@@ -361,7 +266,7 @@ public class CreditCardTest {
 	 * @see examples.nbank.CreditCard#validate(int[], String)
 	 * @author gtrofimov
 	 */
-	@Test
+	@Test(timeout = 1000)
 	public void testValidate() throws Throwable {
 		// When
 		int[] digLengths = new int[0]; // UTA: default value

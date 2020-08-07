@@ -5,8 +5,6 @@ package examples.nbank;
 
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertNotNull;
-import static org.powermock.api.mockito.PowerMockito.mock;
-import static org.powermock.api.mockito.PowerMockito.when;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -26,27 +24,18 @@ public class BankTest {
 	 * @see examples.nbank.Bank#addAccount(Account)
 	 * @author gtrofimov
 	 */
-	@Test
+	@Test(timeout = 1000)
 	public void testAddAccount() throws Throwable {
 		// Given
 		Bank underTest = new Bank();
 
 		// When
-		Account account = mockAccount();
+		Customer customer = NbankFactory.createCustomer();
+		Account account = NbankFactory.createAccount(customer);
 		Boolean result = underTest.addAccount(account);
 
 		// Then
 		// assertFalse(result);
-	}
-
-	/**
-	 * Parasoft Jtest UTA: Helper method to generate and configure mock of Account
-	 */
-	private static Account mockAccount() throws Throwable {
-		Account account = mock(Account.class);
-		String getIDResult = ""; // UTA: default value
-		when(account.getID()).thenReturn(getIDResult);
-		return account;
 	}
 
 	/**
@@ -55,7 +44,7 @@ public class BankTest {
 	 * @see examples.nbank.Bank#closeAccounts(List)
 	 * @author gtrofimov
 	 */
-	@Test
+	@Test(timeout = 1000)
 	public void testCloseAccounts() throws Throwable {
 		// Given
 		Bank underTest = new Bank();
@@ -72,7 +61,7 @@ public class BankTest {
 	 * @see examples.nbank.Bank#endMaintenance()
 	 * @author gtrofimov
 	 */
-	@Test
+	@Test(timeout = 1000)
 	public void testEndMaintenance() throws Throwable {
 		// Given
 		Bank underTest = new Bank();
@@ -88,7 +77,7 @@ public class BankTest {
 	 * @see examples.nbank.Bank#getAccount(String, String)
 	 * @author gtrofimov
 	 */
-	@Test
+	@Test(timeout = 1000)
 	public void testGetAccount() throws Throwable {
 		// Given
 		Bank underTest = new Bank();
@@ -108,7 +97,7 @@ public class BankTest {
 	 * @see examples.nbank.Bank#isMaintenanceMode()
 	 * @author gtrofimov
 	 */
-	@Test
+	@Test(timeout = 1000)
 	public void testIsMaintenanceMode() throws Throwable {
 		// Given
 		Bank underTest = new Bank();
@@ -126,7 +115,7 @@ public class BankTest {
 	 * @see examples.nbank.Bank#setAccountsLimit(Integer)
 	 * @author gtrofimov
 	 */
-	@Test
+	@Test(timeout = 1000)
 	public void testSetAccountsLimit() throws Throwable {
 		// When
 		Integer limit = 0; // UTA: default value
@@ -140,7 +129,7 @@ public class BankTest {
 	 * @see examples.nbank.Bank#startMaintenance()
 	 * @author gtrofimov
 	 */
-	@Test
+	@Test(timeout = 1000)
 	public void testStartMaintenance() throws Throwable {
 		// Given
 		Bank underTest = new Bank();
